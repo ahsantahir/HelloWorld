@@ -1,0 +1,19 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.sabeeh.helloworld.HomeActivity">
+    <item android:id="@+id/action_settings" android:title="@string/action_settings"
+        android:orderInCategory="100" app:showAsAction="never" />
+
+    <item android:id="@+id/swimButton"
+        android:title="Swim"
+        android:icon="@drawable/swim_button"
+        android:orderInCategory="100"
+        app:showAsAction="ifRoom"/>
+
+    <item android:id="@+id/analysisButton"
+        android:title="Swim"
+        android:icon="@drawable/analysis_button"
+        android:orderInCategory="100"
+        app:showAsAction="ifRoom"/>
+</menu>

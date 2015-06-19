@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="700dp"
+    android:layout_height="wrap_content"
+    android:background="#6F6F6F"
+    android:orientation="horizontal"
+    android:gravity="center_vertical" >
+
+    <TextView
+        android:id="@+id/textSeparator"
+        android:layout_width="700dp"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:padding="8dp"
+        android:background="#6f6f6f"
+        android:text=""
+        android:textAllCaps="true"
+        android:textColor="#FFF"
+        android:textStyle="bold"
+        android:visibility="visible" />
+
+</LinearLayout>

@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total Time: "
+        android:id="@+id/dialogRaceTime"
+        android:textColor="#0073a8"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dialogRaceTime"
+        android:text="Total Distance: "
+        android:id="@+id/dialogRaceDistance"
+        android:textColor="#0073a8"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dialogRaceDistance"
+        android:text="Total Laps: "
+        android:id="@+id/dialogRaceLaps"
+        android:textColor="#0073a8"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dialogRaceLaps"
+        android:textColor="#0073a8"
+        android:text="Type:"
+        android:id="@+id/dialogRaceType"
+        />
+
+    <Spinner
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/dialogRaceTypeValue"
+        android:layout_alignParentRight="true"
+        android:layout_alignBottom="@id/dialogRaceType"
+        android:entries="@array/race_types"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/dialogRaceTimeValue"
+        android:layout_alignParentRight="true"
+        android:text="00:1:05"
+        android:layout_alignBottom="@id/dialogRaceTime"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/dialogRaceDistanceValue"
+        android:layout_alignParentRight="true"
+        android:text="50 m"
+        android:layout_alignBottom="@id/dialogRaceDistance" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/dialogRaceLapsValue"
+        android:layout_alignParentRight="true"
+        android:text="2"
+        android:layout_alignBottom="@id/dialogRaceLaps" />
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="fill_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_below="@+id/dialogRaceTypeValue"-->
+    <!--android:layout_marginTop="4dp"-->
+    <!--android:id="@+id/votingStarsLayout">-->
+
+    <!--<ImageView-->
+    <!--android:layout_width="50dp"-->
+    <!--android:layout_height="50dp"-->
+    <!--android:id="@+id/star1"-->
+    <!--android:layout_weight="1"-->
+    <!--android:src="@drawable/star_unselected"-->
+    <!--android:clickable="true"-->
+    <!--/>-->
+
+    <!--<ImageView-->
+    <!--android:layout_width="50dp"-->
+    <!--android:layout_height="50dp"-->
+    <!--android:id="@+id/star2"-->
+    <!--android:layout_weight="1"-->
+    <!--android:src="@drawable/star_unselected"-->
+    <!--android:clickable="true"-->
+    <!--/>-->
+
+    <!--<ImageView-->
+    <!--android:layout_width="50dp"-->
+    <!--android:layout_height="50dp"-->
+    <!--android:id="@+id/star3"-->
+    <!--android:layout_weight="1"-->
+    <!--android:src="@drawable/star_unselected"-->
+    <!--android:clickable="true"-->
+    <!--/>-->
+
+    <!--<ImageView-->
+    <!--android:layout_width="50dp"-->
+    <!--android:layout_height="50dp"-->
+    <!--android:id="@+id/star4"-->
+    <!--android:layout_weight="1"-->
+    <!--android:src="@drawable/star_unselected"-->
+    <!--android:clickable="true"-->
+    <!--/>-->
+
+    <!--<ImageView-->
+    <!--android:layout_width="50dp"-->
+    <!--android:layout_height="50dp"-->
+    <!--android:id="@+id/star5"-->
+    <!--android:layout_weight="1"-->
+    <!--android:src="@drawable/star_unselected"-->
+    <!--android:clickable="true"-->
+    <!--/>-->
+
+    <!--</LinearLayout>-->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/commentsHeading"
+        android:layout_below="@id/dialogRaceTypeValue"
+        android:text="Comments:"
+        android:textColor="#0073a8"
+        android:layout_marginTop="14dp"/>
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="100dp"
+        android:layout_below="@id/commentsHeading"
+        android:id="@+id/commentsField"
+        android:hint="Type Comments Here..."
+        android:gravity="start"
+        android:textSize="12sp"
+
+        android:background="@drawable/comments_background"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/postCommentButton"
+        android:background="@drawable/button_layout"
+        android:text="POST"
+        android:textColor="#ffffff"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_below="@+id/commentsField"
+        android:layout_marginBottom="4dp"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/viewGraphButton"
+        android:background="@drawable/button_layout"
+        android:text="VIEW GRAPH"
+        android:textColor="#ffffff"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_below="@+id/postCommentButton"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/likeButton"
+        android:background="@drawable/button_layout"
+        android:text="LIKE"
+        android:textColor="#ffffff"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="4dp"
+        android:layout_below="@id/viewGraphButton"
+        android:layout_marginTop="4dp"
+
+        />
+
+</RelativeLayout>

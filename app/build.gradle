@@ -1,0 +1,73 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 21
+    buildToolsVersion "21.1.2"
+
+    defaultConfig {
+        applicationId "com.example.sabeeh.helloworld"
+        minSdkVersion 14
+        targetSdkVersion 21
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile 'com.android.support:appcompat-v7:21.0.3'
+    compile 'com.jjoe64:graphview:4.0.0'
+    compile 'com.roomorama:caldroid:1.1.7'
+    compile 'se.emilsjolander:stickylistheaders:2.5.2'
+    compile 'com.android.support:support-v4:21.0.3'
+
+
+
+    compile('org.apache.httpcomponents:httpmime:4.3.6') {
+        exclude module: 'httpclient'
+    }
+    compile 'org.apache.httpcomponents:httpclient-android:4.3.5'
+
+
+
+    'com.facebook.android:facebook-android-sdk:3.21.1'
+    compile files('src/libs/gson-2.2.2.jar')
+    compile files('src/libs/guava-18.0.jar')
+    compile files('src/libs/mobileservices-1.1.5-javadoc.jar')
+    compile files('src/libs/mobileservices-1.1.5-sources.jar')
+    compile files('src/libs/mobileservices-1.1.5.jar')
+    //compile files('src/libs/apache-mime4j-0.4.jar')
+    //compile files('src/libs/httpmime-4.4.1.jar')
+    //compile files('src/libs/httpcore-4.4.1.jar')
+    //compile files('src/libs/httpclient-4.4.1.jar')
+    compile files('src/libs/activeandroid-3.0.jar')
+
+    compile 'com.jjoe64:graphview:4.0.0'
+    compile 'com.github.asne.facebook:facebook:3.17.2'
+
+
+
+}
+repositories {
+    mavenCentral()
+
+}
+
+
+
+
+
+
+android {
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/NOTICE'
+    }
+}

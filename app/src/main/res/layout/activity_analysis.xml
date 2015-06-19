@@ -1,0 +1,208 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    tools:context=".MainActivity" >
+
+    <include
+        layout="@layout/header"
+        android:id="@+id/include1"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:weightSum="2"
+        android:layout_below="@id/include1"
+        android:id="@+id/graphButtonsLayout"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/showTableButton"
+            android:background="@drawable/table_button_selected"
+            android:onClick="showTableOptions"
+            android:layout_weight="1"
+            />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/showGraphButton"
+            android:background="@drawable/graph_button_normal"
+            android:onClick="showGraphOptions"
+            android:layout_weight="1"
+            />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/graphButtonsLayout"
+        android:id="@+id/graphDataTableScroll">
+
+        <HorizontalScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        <TableLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/graphDataTable"
+        android:stretchColumns="1"
+        android:padding="16dp"
+        android:showDividers="middle|end|beginning">
+
+        <TableRow>
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="Strokes"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                android:id="@+id/tableHeader1"/>
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="Coordina"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                android:id="@+id/tableHeader2"
+                android:gravity="right"
+                android:paddingLeft="16dp"/>
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="Mean Velocity"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                android:id="@+id/tableHeader3"
+                android:gravity="right"
+                android:paddingLeft="16dp"/>
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="Stroke Freq"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                android:id="@+id/tableHeader4"
+                android:gravity="right"
+                android:paddingLeft="16dp"/>
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="Timing Turn"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                android:id="@+id/tableHeader5"
+                android:gravity="right"
+                android:paddingLeft="16dp"/>
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="Clean Stroke Time"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                android:id="@+id/tableHeader6"
+                android:gravity="right"
+                android:paddingLeft="16dp"/>
+
+        </TableRow>
+        </TableLayout>
+    </HorizontalScrollView>
+    </ScrollView>
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/graphButtonsLayout"
+        android:padding="16dp"
+        android:id="@+id/graphViewScroll">
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/graphViewHolder"
+            >
+
+            <com.jjoe64.graphview.GraphView
+                android:layout_width="wrap_content"
+                android:layout_height="300dip"
+                android:id="@+id/graph"
+                android:layout_marginTop="16dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <HorizontalScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/graph"
+                android:layout_marginTop="20dp"
+                android:id="@+id/checkBoxScrollView" >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:id="@+id/checkBoxHolder">
+
+                    <!--<CheckBox-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:text="Race 1"-->
+                        <!--android:id="@+id/race1"-->
+                        <!--android:onClick="updateGraph"/>-->
+
+                    <!--<CheckBox-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:text="Race 2"-->
+                        <!--android:id="@+id/race2"-->
+                        <!--android:onClick="updateGraph"/>-->
+
+                    </LinearLayout>
+
+                </HorizontalScrollView>
+
+           <!-- <Spinner
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/axisSelector"
+                android:layout_below="@id/checkBoxScrollView"
+                android:layout_marginTop="4dp"
+                android:entries="@array/axis_options" />-->
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <ImageButton
+        android:layout_width="20dp"
+        android:layout_height="30dp"
+        android:id="@+id/nextGraphButton"
+        android:background="@drawable/button_right"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+
+        android:onClick="moveGraphs"/>
+
+    <ImageButton
+        android:layout_width="20dp"
+        android:layout_height="30dp"
+        android:id="@+id/prevGraphButton"
+       android:background="@drawable/button_left"
+        android:onClick="moveGraphs"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"/>
+
+
+</RelativeLayout>

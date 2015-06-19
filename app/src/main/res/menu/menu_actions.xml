@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/action_feedback" android:title="Feedback"
+        android:orderInCategory="100" />
+
+    <item android:id="@+id/action_settings" android:title="Settings"
+        android:orderInCategory="100" />
+
+    <item android:id="@+id/action_faq" android:title="FAQ"
+        android:orderInCategory="100" />
+
+    <item android:id="@+id/action_license" android:title="Open Source Licences"
+        android:orderInCategory="100" />
+
+    <item android:id="@+id/action_about" android:title="About"
+        android:orderInCategory="100" />
+    <item android:id="@+id/action_logout" android:title="Logout"
+        android:orderInCategory="100" />
+
+</menu>

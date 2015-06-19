@@ -1,0 +1,84 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.sabeeh.helloworld.RaceDataActivity"
+    android:descendantFocusability="blocksDescendants">
+
+    <include layout="@layout/header"
+        android:id="@+id/include1"/>
+
+    <ImageButton
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:background="@drawable/search_button_layout"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="13dp"
+        android:layout_marginRight="140dp"
+        android:id="@+id/searchButton"
+        android:clickable="true"
+        android:onClick="search"/>
+
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/include1"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/calendar1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/include1">
+    </LinearLayout>
+
+    <!--<LinearLayout
+        android:id="@+id/button_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/include1" >
+
+        <Button
+            android:id="@+id/customize_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Customize" />
+
+        <Button
+            android:id="@+id/show_dialog_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Show Dialog" />
+    </LinearLayout>-->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textview"/>
+
+    <se.emilsjolander.stickylistheaders.StickyListHeadersListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/raceDataListView"
+        android:layout_below="@id/textview"/>
+
+</LinearLayout>
+
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/button_post_background"
+        android:text="ANALYZE"
+        android:textColor="#ffffff"
+        android:textStyle="bold"
+        android:id="@+id/analyzeButton"
+        android:onClick="analyzePerformance"
+        android:visibility="invisible"/>
+</RelativeLayout>

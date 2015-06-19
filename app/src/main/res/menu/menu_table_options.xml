@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/action_split" android:title="Split Times"
+        android:orderInCategory="100" />
+
+    <item android:id="@+id/action_velocity" android:title="Mean Velocity"
+        android:orderInCategory="100" />
+
+    <item android:id="@+id/action_stroke_frequency" android:title="Stroke Frequency"
+        android:orderInCategory="100" />
+
+    <item android:id="@+id/action_stroke_length" android:title="Stroke Length"
+        android:orderInCategory="100" />
+
+    <item android:id="@+id/action_timing_turns" android:title="Timing Turns"
+        android:orderInCategory="100" />
+
+    <item android:id="@+id/action_clean_stroke" android:title="Clean Stroke Time"
+        android:orderInCategory="100" />
+
+
+</menu>

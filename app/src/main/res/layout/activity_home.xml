@@ -1,0 +1,264 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.sabeeh.helloworld.HomeActivity"
+    android:background="#ffffff">
+
+    <include
+        layout="@layout/header"
+        android:id="@+id/include1"></include>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/include1"
+        android:id="@+id/profileInfoHolder">
+
+
+        <ImageView
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:src="@drawable/profile_picture_holder"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+            android:id="@+id/profilePicture"/>
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/profile_background"
+            android:layout_centerVertical="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sabeeh Zaidi"
+            android:textSize="25sp"
+            android:layout_toRightOf="@id/profilePicture"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="14dp"
+            android:textColor="#0073a8"
+            android:id="@+id/profileName"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/swimScreenLayout"
+        android:layout_below="@id/profileInfoHolder"
+        >
+
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/info_button"
+
+            android:background="@null"
+            android:id="@+id/infoButton"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/infoButton"
+            android:textSize="25sp"
+            android:layout_toRightOf="@id/infoButton"
+            android:layout_marginLeft="4dp"
+            android:textColor="#f7821b"
+            android:textStyle="bold"
+            android:text="11:43 am"
+            android:id="@+id/currentTime"
+            />
+
+        <!--<TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/infoButton"
+            android:layout_alignBottom="@id/infoButton"
+            android:text="15 January 2015"
+            android:textColor="#f7821b"
+            android:textSize="20sp"
+            android:layout_marginLeft="4dp"
+            android:id="@+id/currentDate"/>
+        -->
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/icon_lap"
+            android:layout_below="@id/infoButton"
+            android:layout_marginTop="14dp"
+            android:layout_marginLeft="4dp"
+            android:id="@+id/iconDuration"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Duration"
+            android:layout_toRightOf="@id/iconDuration"
+            android:layout_alignTop="@id/iconDuration"
+            android:layout_marginLeft="14dp"
+            android:textSize="20sp"
+            android:id="@+id/durationText"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/durationTime"
+            android:layout_below="@id/durationText"
+            android:layout_toRightOf="@id/iconDuration"
+            android:layout_marginLeft="14dp"
+            android:textSize="20sp"
+            android:text="0:00:00"
+            android:textColor="#000000"
+            android:layout_alignRight="@+id/poolLengthValue"
+            android:layout_alignEnd="@+id/poolLengthValue" />
+
+
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/iconPoolLength"
+            android:src="@drawable/icon_distance"
+            android:layout_below="@id/durationTime"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="4dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pool Length"
+            android:layout_marginLeft="14dp"
+            android:layout_alignTop="@id/iconPoolLength"
+            android:layout_toRightOf="@id/iconPoolLength"
+            android:textSize="20sp"
+            android:id="@+id/lengthText"/>
+
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/poolLengthValue"
+            android:layout_below="@id/lengthText"
+            android:layout_toRightOf="@id/iconPoolLength"
+            android:layout_marginLeft="14dp"
+            android:text="0.0 m"
+            android:textSize="20sp"
+            android:textColor="#000000"
+            android:inputType="numberDecimal"
+            android:layout_alignRight="@+id/totalDistanceText"
+            android:layout_alignEnd="@+id/totalDistanceText" />
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/icon_lap"
+            android:layout_below="@+id/totalDistanceValue"
+            android:id="@+id/iconLaps"
+            android:layout_marginTop="4dp"
+            android:layout_marginLeft="4dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/iconLaps"
+            android:layout_marginLeft="14dp"
+            android:id="@+id/lapsText"
+            android:layout_alignTop="@id/iconLaps"
+            android:text="Laps"
+            android:textSize="20sp"
+            />
+
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textSize="20sp"
+            android:layout_below="@id/lapsText"
+            android:layout_alignLeft="@id/lapsText"
+            android:textColor="#000000"
+            android:inputType="number"
+            android:layout_alignRight="@+id/totalDistanceValue"
+            android:layout_alignEnd="@+id/totalDistanceValue" />
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_below="@id/poolLengthValue"
+            android:src="@drawable/icon_distance"
+            android:layout_alignRight="@id/iconPoolLength"
+            android:layout_marginTop="4dp"
+            android:id="@+id/iconDistance"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total Distance"
+            android:textSize="20sp"
+            android:layout_toRightOf="@id/iconDistance"
+            android:layout_alignTop="@id/iconDistance"
+            android:layout_marginLeft="14dp"
+            android:id="@+id/totalDistanceText"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0.0 m"
+            android:textSize="20sp"
+            android:layout_toRightOf="@id/iconDistance"
+            android:layout_marginLeft="14dp"
+            android:id="@+id/totalDistanceValue"
+            android:layout_below="@id/totalDistanceText"
+            android:textColor="#000000"
+            android:layout_alignRight="@+id/totalDistanceText"
+            android:layout_alignEnd="@+id/totalDistanceText" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignTop="@id/swimScreenLayout"
+        android:id="@+id/swimScreenLightsHolder"
+        android:layout_marginLeft="44dp"
+        android:orientation="vertical"
+        android:visibility="invisible">
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/light_red"
+            android:id="@+id/lightRed"/>
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/light_gray"
+            android:id="@+id/lightYellow"
+            android:layout_below="@id/lightRed"
+            android:layout_marginTop="14dp"/>
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/light_gray"
+            android:id="@+id/lightGreen"
+            android:layout_below="@id/lightYellow"
+            android:layout_marginTop="14dp"/>
+
+    </RelativeLayout>
+
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="110dp"
+        android:id="@+id/buttonStartSwim"
+        android:background="@drawable/swim_button_layout"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="14dp"
+        android:onClick="startSwimming" />
+
+</RelativeLayout>

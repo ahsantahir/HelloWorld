@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <com.jjoe64.graphview.GraphView
+        android:layout_width="match_parent"
+        android:layout_height="200dip"
+        android:id="@+id/graph"
+        android:layout_marginTop="16dp"/>
+
+    <HorizontalScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/graph"
+        android:layout_marginTop="20dp"
+        android:id="@+id/checkBoxScrollView" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/checkBoxHolder">
+
+            <!--<CheckBox-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="Race 1"-->
+            <!--android:id="@+id/race1"-->
+            <!--android:onClick="updateGraph"/>-->
+
+            <!--<CheckBox-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="Race 2"-->
+            <!--android:id="@+id/race2"-->
+            <!--android:onClick="updateGraph"/>-->
+
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/axisSelector"
+        android:layout_below="@id/checkBoxScrollView"
+        android:layout_marginTop="4dp"
+        android:entries="@array/axis_options" />
+
+
+</RelativeLayout>

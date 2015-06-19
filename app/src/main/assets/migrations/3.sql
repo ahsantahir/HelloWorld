@@ -1,0 +1,1 @@
+ALTER TABLE swim ADD COLUMN user TEXT;

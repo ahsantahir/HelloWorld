@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/action_roll_all" android:title="Roll All Laps"
+        android:orderInCategory="100" />
+
+    <item android:id="@+id/action_coordination_strokes" android:title="Coordination + Strokes All Laps"
+        android:orderInCategory="100" />
+
+    <item android:id="@+id/action_roll_coordination" android:title="Roll + Coordination Index one Lap"
+        android:orderInCategory="100" />
+
+</menu>

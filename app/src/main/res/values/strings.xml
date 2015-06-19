@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">HelloWorld</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="app_id">873812382653288</string>
+    <string-array name="axis_options">
+        <item>Roll for all Laps</item>
+        <item>Global Coordination + Strokes for all laps</item>
+        <item>Roll + coordination index for one lap</item>
+    </string-array>
+    <string-array name="race_types">
+        <item>Type 1</item>
+        <item>Type 2</item>
+        <item>Type 3</item>
+        <item>Type 4</item>
+    </string-array>
+    <string-array name="notification_types">
+        <item>Daily</item>
+        <item>Weekly</item>
+        <item>Monthly</item>
+        <item>Always</item>
+        <item>Never</item>
+    </string-array>
+    <string-array name="column_types">
+        <item>Select</item>
+        <item>Roll all Laps</item>
+        <item>Coordina + Strokes all Laps</item>
+        <item>Roll + Coordina Index One Lap</item>
+    </string-array>
+
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="title_activity_home_screen">HomeScreen</string>
+    <string name="title_activity_swim_screen">SwimScreenActivity</string>
+    <string name="title_activity_race_data">RaceDataActivity</string>
+    <string name="title_activity_race_details">RaceDetailsActivity</string>
+    <string name="title_activity_settings">SettingsActivity</string>
+    <string name="title_activity_feedback">FeedbackActivity</string>
+
+</resources>

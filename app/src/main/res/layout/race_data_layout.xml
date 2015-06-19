@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:descendantFocusability="blocksDescendants"
+    android:id="@+id/raceLayout">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/raceLayoutDateHeader"
+        android:text="30 JAN"
+        android:textColor="#000000"
+        android:layout_centerVertical="true"
+        android:textStyle="bold"
+        android:layout_marginLeft="14dp"
+        android:visibility="invisible"/>
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="5dp"
+        android:id="@+id/topDivider" />
+
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:id="@+id/raceChecked"
+        android:layout_marginTop="6dp"
+        android:layout_marginLeft="6dp"
+        android:src="@drawable/icon_unchecked"/>
+
+    <!--<TextView-->
+    <!--android:layout_width="20dp"-->
+    <!--android:layout_height="20dp"-->
+    <!--android:text="\@"-->
+    <!--android:textStyle="bold"-->
+    <!--android:textSize="14dp"-->
+    <!--android:textColor="#f7821b"-->
+    <!--android:id="@+id/raceLayoutTimeStampIcon"-->
+    <!--android:src="@drawable/icon_time"-->
+    <!--android:layout_marginTop="2dp"-->
+    <!--android:layout_marginLeft="4dp"-->
+    <!--android:layout_toRightOf="@id/raceChecked"/>-->
+
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_below="@+id/raceCheckBox"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/icon_heart_normal"
+        android:id="@+id/raceLayoutLike"
+        android:layout_toRightOf="@id/raceChecked"
+        />
+
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:id="@+id/raceLayoutComment"
+        android:src="@drawable/icon_comment_normal"
+        android:layout_toRightOf="@id/raceLayoutLike"
+        android:layout_below="@+id/raceCheckBox"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="4dp"/>
+
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:id="@+id/raceLayoutDelete"
+        android:layout_toRightOf="@id/raceLayoutComment"
+        android:layout_below="@+id/raceCheckBox"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/icon_delete"
+        />
+
+    <TextView
+        android:layout_below="@id/topDivider"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="\@20:30"
+        android:layout_toRightOf="@id/raceChecked"
+        android:layout_marginLeft="5dp"
+        android:id="@+id/raceCheckBox"
+        />
+
+    <ImageView
+        android:layout_below="@id/topDivider"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_toRightOf="@id/raceCheckBox"
+        android:src="@drawable/icon_distance"
+        android:layout_marginLeft="25dp"
+        android:id="@+id/raceLayoutDistanceIcon"/>
+
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:id="@+id/raceLayoutTimeIcon"
+        android:src="@drawable/icon_lap"
+        android:layout_below="@id/raceLayoutDistanceIcon"
+        android:layout_alignLeft="@id/raceLayoutDistanceIcon"
+        android:layout_marginTop="4dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/raceLayoutDistanceValue"
+        android:layout_toRightOf="@id/raceLayoutDistanceIcon"
+        android:text="48 m"
+        android:textColor="#888888"
+        android:layout_marginLeft="4dp"
+        android:layout_alignTop="@id/raceLayoutDistanceIcon"
+        android:textSize="15sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/raceLayoutTimeValue"
+        android:text="00:25:00"
+        android:textColor="#888888"
+        android:textSize="15sp"
+        android:layout_toRightOf="@id/raceLayoutTimeIcon"
+        android:layout_marginLeft="4dp"
+        android:layout_alignBottom="@id/raceLayoutTimeIcon"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/raceLayoutDateTimeValue"
+        android:text=""
+        android:textStyle="bold"
+        android:textColor="#888888"
+        android:textSize="10sp"
+        android:layout_toLeftOf="@+id/raceLayoutType"
+        android:layout_marginTop="4dp"
+        android:layout_marginRight="14dp"
+        android:layout_alignBottom="@id/raceLayoutTimeValue"
+        />
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="40dp"
+        android:layout_centerVertical="true"
+        android:background="#666666"
+        android:id="@+id/raceLayoutRowDivider"
+        android:layout_marginRight="14dp"
+        android:layout_toLeftOf="@+id/raceLayoutSelected"/>
+
+    <CheckBox
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_alignParentRight="true"
+        android:id="@+id/raceLayoutSelected"
+        android:gravity="center"/>
+
+    <!--<ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/icon_unshared"
+        android:layout_toLeftOf="@id/raceLayoutSelected"
+        android:layout_marginTop="4dp"
+        android:layout_marginRight="14dp"
+        android:id="@+id/raceLayoutShared"/>-->
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="40dp"
+        android:id="@+id/raceLayoutType"
+        android:layout_toLeftOf="@id/raceLayoutRowDivider"
+        android:layout_marginTop="4dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/swim_type_1"/>
+
+    <!--<TextView-->
+    <!--android:layout_width="30dp"-->
+    <!--android:layout_height="30dp"-->
+    <!--android:id="@+id/raceLayoutVoteValue"-->
+    <!--android:layout_toLeftOf="@id/raceLayoutType"-->
+    <!--android:text="n"-->
+    <!--android:textColor="#f7821b"-->
+    <!--android:textSize="30sp"-->
+    <!--/>-->
+
+    <!--<ImageView-->
+    <!--android:layout_width="30dp"-->
+    <!--android:layout_height="30dp"-->
+    <!--android:id="@+id/raceLayoutVoteIcon"-->
+    <!--android:layout_toLeftOf="@id/raceLayoutVoteValue"-->
+    <!--android:src="@drawable/star"/>-->
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="5dp"
+        android:layout_below="@id/raceLayoutTimeIcon"
+        />
+
+</RelativeLayout>
